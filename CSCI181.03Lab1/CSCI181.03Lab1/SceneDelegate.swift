@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  CSCI181.03Lab1
 //
-//  Created by Caitlin Hung on 2/22/23.
+//  Created by Kyra Hung on 2/22/23.
 //
 
 import UIKit
