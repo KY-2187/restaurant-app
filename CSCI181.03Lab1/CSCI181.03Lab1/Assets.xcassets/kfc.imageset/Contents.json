@@ -1,11 +1,11 @@
 {
   "images" : [
     {
+      "filename" : "kfc.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "kfc.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

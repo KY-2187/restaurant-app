@@ -48,20 +48,17 @@ class ViewController: UITableViewController {
         return cell
     }
     
-    /**
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
         let restaurant = restaurants[indexPath.row]
-        goToDetailsViewController(restaurant: restaurant)
+        
+        let storyboard = UIStoryboard(name: "Details", bundle: nil)
+        guard let detailsController = storyboard.instantiateViewController(withIdentifier: "details") as? DetailsController else {return}
+        detailsController.restaurant = restaurant
+        self.navigationController?.pushViewController(detailsController, animated: true)
+        
     }
-    
-    func goToDetailsViewController(restuarant: Restaurant) {
-        let storyboard = UIStoryboard(name: "DetailsViewController", bundle: nil)
-        guard let detailsViewController = storyboard.instantiateViewController(withIdentifier: "detailsVCIdentifier") as? DetailsViewController else {return}
-        detailsViewController.restuarant = restaurant
-    }
-     */
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1

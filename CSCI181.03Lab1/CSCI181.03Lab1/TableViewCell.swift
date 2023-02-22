@@ -17,6 +17,9 @@ class TableViewCell: UITableViewCell {
     let restaurantImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        imageView.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        imageView.contentMode = .scaleAspectFit
         return imageView
     }()
     
@@ -25,6 +28,7 @@ class TableViewCell: UITableViewCell {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
         stackView.alignment = .center
+        stackView.spacing = 10
         return stackView
     }()
     
